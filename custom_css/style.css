@@ -1,0 +1,566 @@
+html, body {
+  overflow-x: hidden;
+}
+/* Full-page gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #000000, #08234e);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+.gap{
+  margin-top: 70px !important;
+}
+/* navbar start */
+/* Transparent Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 10px 0;
+}
+.nav-link {
+  color: white !important;
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-link {
+  font-weight: 600; /* Use 700 for bolder text */
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #447bfa !important;
+  text-shadow: 0 0 8px #447bfa;
+  transition: 0.3s ease;
+}
+
+.bi-person-circle {
+  transition: 0.3s ease;
+  font-size: 2rem;
+}
+
+.bi-person-circle:hover {
+  color: #447bfa;
+  text-shadow: 0 0 8px rgba(15, 87, 255, 0.7), 
+               0 0 12px rgba(9, 88, 245, 0.6), 
+               0 0 16px rgba(0, 58, 185, 0.5);
+}
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+.dropdown-menu {
+  background-color: rgba(255, 255, 255, 0.05) !important; /* very light glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* optional border */
+  border-radius: 12px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+  font-weight: bold !important;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  color: #447bfa !important;
+  text-shadow: 0 0 8px #447bfa;
+}
+
+/* nav end */
+
+/* hero start */
+.glass-btn {
+  font-weight: bold !important; /* Make button text bold */
+  color: #fff !important;
+  background: linear-gradient(135deg, rgba(78, 84, 200, 0.6), rgba(143, 148, 251, 0.3));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 15px !important;
+  transition: all 0.3s ease !important;
+}
+.glass-btn:hover {
+  background: linear-gradient(135deg, rgba(143, 148, 251, 0.6), rgba(78, 84, 200, 0.4));
+  color: #63ceff !important; /* New text color on hover */
+  transform: scale(1.05);
+}
+.read-btn{
+    font-weight: bold !important;
+    color: #fff !important;
+    background: none;
+    border:solid grey 2px !important;
+    border-radius: 15px !important;
+    transition: all 0.3s ease !important;
+}
+.read-btn:hover{
+    background: linear-gradient(135deg, rgba(143, 148, 251, 0.6), rgba(78, 84, 200, 0.4));
+    transform: scale(1.05);
+}
+/* hero end */
+/* customer start */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 20s linear infinite;
+  gap: 60px;
+}
+
+.logo-track img {
+  height: 60px;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-track img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* customer end */
+
+/* why us start */
+.glass-card {
+  background: linear-gradient(135deg, rgba(143, 148, 251, 0.149), rgba(78, 84, 200, 0.216));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* why us end */
+
+/* services start */
+.service-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  color: white;
+}
+
+.service-card:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+/* Description always visible */
+.service-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Extra text appears on hover */
+.extra-text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.service-card:hover .extra-text {
+  opacity: 1;
+  max-height: 120px;
+}
+.btn-outline-light:hover {
+  background-color: white;
+  color: #000;
+}
+.service-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* On mobile: always show the extra text */
+@media (max-width: 767px) {
+  .extra-text {
+    opacity: 1 !important;
+    max-height: none !important;
+  }
+}
+/* services end */
+
+/* cirtificat start */
+/* Certificate Card Style */
+.certificate-card {
+  max-width: 600px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(0, 64, 128, 0.3), rgba(0, 128, 255, 0.25));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* Certificate Images */
+.certificate-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  height: 100%; /* important for vertical alignment */
+}
+.certificate-card:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, rgba(252, 253, 253, 0.3), rgba(95, 196, 255, 0.25));
+}
+.cert-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+.logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+.cert-tag {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 20px;
+}
+/* View All Button */
+.view-all-btn {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  border-radius: 50px !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.view-all-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.view-all-btn:hover::before {
+  left: 0;
+}
+
+.view-all-btn:hover {
+  color: white;
+  border-color: transparent;
+}
+
+/* Carousel arrow styling (optional) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+@media (min-width: 1200px) {
+  .popular-certificates-section .container {
+    max-width: 1140px;
+  }
+}
+.custom-carousel-arrow {
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
+}
+
+.custom-carousel-arrow:hover {
+  color: #00c6ff;
+}
+
+.carousel-control-prev.custom-carousel-arrow {
+  left: -30px;
+}
+
+.carousel-control-next.custom-carousel-arrow {
+  right: -30px;
+}
+
+/* cirtificate end */
+
+/* testimonial start */
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+/* Carousel Controls */
+.circle-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s;
+}
+.circle-btn:hover {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+}
+/* testimonial end */
+
+/* get the app strt */
+
+.get-app-section {
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.download-btn {
+  color: #fff !important;
+  font-weight: 700 !important;
+  border: none;
+  border-radius: 50px !important;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.download-btn:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.download-btn i {
+  z-index: 1;
+  font-size: 1.3rem;
+}
+
+.download-btn span {
+  z-index: 1;
+  position: relative;
+}
+
+/* Apple Button */
+.apple-btn {
+  background: #1c1c1e;
+}
+
+.apple-btn:hover {
+  background: #2c2c2e;
+}
+
+/* Android Button */
+.android-btn {
+  background: #3ddc84;
+  color: #000 !important;
+}
+
+.android-btn i {
+  color: #000;
+}
+
+.android-btn:hover {
+  background: #34c379;
+}
+/* get the app end */
+
+/* booking system start */
+.booking-form-box {
+  background: linear-gradient(
+    135deg,
+    rgba(12, 2, 26, 0.466),
+    rgba(21, 71, 251, 0.235)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  color: #ffffff;
+}
+
+.booking-form-box input::placeholder {
+  color: #bbb;
+}
+
+.booking-form-box input,
+.booking-form-box input:focus {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  box-shadow: none;
+}
+.booking-form-box button {
+  background: #ffffff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+  box-shadow: none;
+}
+
+.booking-form-box button:hover {
+  background: linear-gradient(135deg, #4facfe, #1e00fe);  
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+}
+
+/* booking system end */
+
+/* footer start */
+
+.footer {
+  background: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold !important;
+}
+
+.footer-link:hover {
+  color: #00bfff;
+  text-shadow: 0 0 3px #00bfff, 0 0 10px #00bfff;
+}
+
+.footer-icon {
+  color: #cccccc;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #00bfff;
+  text-shadow: 0 0 3px #00bfff, 0 0 10px #00bfff;
+}
+
+/* footer end */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* wp chap start */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebf57;
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.9);
+}
+
+/* wp chat close */

@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./custom_css/style.css" />
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    
+    <!-- wp chat -->
+
+    <a
+      href="https://wa.me/919000000000"
+      target="_blank"
+      class="whatsapp-float"
+      aria-label="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- wp chat close -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container position-relative">
+        <!-- Logo Left -->
+        <a class="navbar-brand text-white" href="#">
+          <img src="./img/logo.png" alt="" style="height: 40px" />
+        </a>
+
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Center Nav Links -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+
+            <!-- Courses Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="coursesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Courses
+              </a>
+              <ul
+                class="dropdown-menu text-center"
+                aria-labelledby="coursesDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">UI/UX Design</a></li>
+                <li><a class="dropdown-item" href="#">AI & ML</a></li>
+                <li><a class="dropdown-item" href="#">Data Science</a></li>
+                <li><a class="dropdown-item" href="#">Cybersecurity</a></li>
+                <li><a class="dropdown-item" href="#">Cloud Computing</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+
+          <!-- Profile icon for mobile -->
+          <div class="d-lg-none text-center mt-3">
+            <a href="#" class="text-white fs-4">
+              <i class="bi bi-person-circle"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profile Icon for Desktop -->
+        <div
+          class="d-none d-lg-block position-absolute end-0 top-50 translate-middle-y me-3"
+        >
+          <a href="#" class="text-white fs-4">
+            <i class="bi bi-person-circle"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- nav end -->
+
+    <!-- hero start -->
+    <section class="hero-section d-flex align-items-center vh-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div
+              class="glass-box p-5 rounded-4 shadow-lg d-flex flex-column flex-lg-row align-items-center justify-content-between"
+            >
+              <!-- Text Section -->
+              <div
+                class="hero-text text-white mb-4 mb-lg-0 text-center text-lg-start"
+              >
+                <div data-aos="zoom-in-up">
+                  <img src="./img/logo.png" alt="" style="max-height: 40px" />
+                </div>
+                <h1 class="display-3 fw-bold" data-aos="zoom-in-up">
+                  Empower Your Learning Journey
+                </h1>
+                <p
+                  class="lead fs-5 mt-3"
+                  data-aos="flip-left"
+                  style="color: rgb(194, 194, 194)"
+                >
+                  Explore expert-led courses to level up your skills, gain new
+                  insights, and stay ahead in your personal and professional
+                  growth. Whether you're a beginner or looking to sharpen your
+                  expertise, our curated learning paths offer flexible, hands-on
+                  experiences designed for real-world success. Join a thriving
+                  community of learners and start your journey toward knowledge,
+                  confidence, and career advancement today.
+                </p>
+                <a
+                  href="#"
+                  class="btn glass-btn mt-4 px-4 py-2"
+                  data-aos="flip-left"
+                  >Sign In</a
+                >
+                <a
+                  href="#"
+                  class="btn read-btn mt-4 px-4 py-2"
+                  data-aos="flip-left"
+                  >Read More</a
+                >
+              </div>
+
+              <!-- Image Section -->
+              <div
+                class="hero-image ms-lg-4 col-lg-5 col-12 text-center text-lg-end"
+                data-aos="zoom-in-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+              >
+                <img
+                  src="./img/hero1.png"
+                  alt="Learning Illustration"
+                  class="img-fluid"
+                  style="max-height: 300px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- customer start -->
+    <section class="trusted-section py-5 text-center">
+      <div class="container">
+        <!-- Heading with count-up -->
+        <h2 class="display-6 fw-bold mb-5 text-white">
+          Trusted by <span id="customerCount">0</span>+ Customers
+        </h2>
+
+        <!-- Logo slider -->
+        <div class="logo-slider">
+          <div class="logo-track">
+            <!-- Repeat logos twice for seamless scroll -->
+            <img src="./img/cs1.png" alt="" />
+            <img src="./img/cs2.png" alt="" />
+            <img src="./img/cs3.png" alt="" />
+            <img src="./img/cs4.png" alt="" />
+            <img src="./img/cs5.png" alt="" />
+            <img src="./img/cs6.png" alt="" />
+            <img src="./img/cs1.png" alt="" />
+            <img src="./img/cs2.png" alt="" />
+            <img src="./img/cs3.png" alt="" />
+            <img src="./img/cs4.png" alt="" />
+            <img src="./img/cs5.png" alt="" />
+            <img src="./img/cs6.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- customer end -->
+
+    <!-- why us start -->
+
+    <section class="why-us-section py-5 text-white gap">
+      <div class="container text-center mb-5">
+        <h2 class="display-6 fw-bold" data-aos="fade-up">Why Choose Us?</h2>
+        <p
+          class="lead"
+          data-aos="fade-up"
+          data-aos-delay="100"
+          style="color: rgb(203, 202, 202)"
+        >
+          Discover what sets us apart and makes learning with us a unique
+          experience. We combine modern teaching techniques, real-world project
+          exposure, and a supportive community to ensure every learner feels
+          empowered and confident in their journey. Whether you're starting from
+          scratch or upgrading your skills, we've got the tools and guidance you
+          need to succeed.
+        </p>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Reason 1 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="glass-card p-4 text-center h-100">
+              <i class="bi bi-mortarboard display-4 mb-3"></i>
+              <h5 class="fw-bold">Expert Instructors</h5>
+              <p>
+                Learn from industry professionals with real-world experience and
+                teaching passion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Reason 2 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="glass-card p-4 text-center h-100">
+              <i class="bi bi-laptop display-4 mb-3"></i>
+              <h5 class="fw-bold">Flexible Learning</h5>
+              <p>
+                Access content anytime, anywhere. Learn at your own pace with
+                on-demand resources.
+              </p>
+            </div>
+          </div>
+
+          <!-- Reason 3 -->
+          <div
+            class="col-md-6 col-lg-4"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="glass-card p-4 text-center h-100">
+              <i class="bi bi-award display-4 mb-3"></i>
+              <h5 class="fw-bold">Certified Courses</h5>
+              <p>
+                Earn valuable certificates that boost your resume and showcase
+                your new skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- why us end -->
+
+    <!-- services start -->
+
+    <section class="services-section py-5 text-white gap">
+      <div class="container text-center mb-5">
+        <h2 class="display-6 fw-bold">Explore Our Courses</h2>
+        <p class="lead">Hover over a course to learn more.</p>
+      </div>
+
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Flip Card 1 -->
+
+          <!-- Web Development -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img src="./img/web_dev.png" alt="" class="service-icon mb-3" />
+              <h5 class="fw-bold">Web Development</h5>
+              <p class="service-desc">
+                Learn HTML, CSS, JavaScript and responsive design with hands-on
+                projects.
+              </p>
+              <div class="extra-text">
+                Master frameworks like React, Bootstrap, and modern deployment
+                practices.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img src="./img/ui.png" alt="" class="service-icon mb-3" />
+              <h5 class="fw-bold">UI/UX Design</h5>
+              <p class="service-desc">
+                Create intuitive user interfaces and seamless user experiences.
+              </p>
+              <div class="extra-text">
+                Explore Figma, user flows, wireframing, and accessibility
+                principles.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artificial Intelligence -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img src="./img/ai.png" alt="" class="service-icon mb-3" />
+              <h5 class="fw-bold">Artificial Intelligence</h5>
+              <p class="service-desc">
+                Understand the fundamentals of AI, ML, and neural networks.
+              </p>
+              <div class="extra-text">
+                Build smart models using Python, TensorFlow, and real datasets.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Science -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img
+                class<img
+                src="./img/data_sci.png"
+                alt=""
+                class="service-icon mb-3"
+              />
+              <h5 class="fw-bold">Data Science</h5>
+              <p class="service-desc">
+                Turn raw data into powerful insights with analytics and
+                visualization.
+              </p>
+              <div class="extra-text">
+                Use Python, Pandas, NumPy, and Matplotlib to explore and report
+                data.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cybersecurity -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img src="./img/cyber.png" alt="" class="service-icon mb-3" />
+              <h5 class="fw-bold">Cybersecurity</h5>
+              <p class="service-desc">
+                Learn how to protect systems, networks, and data from cyber
+                threats.
+              </p>
+              <div class="extra-text">
+                Explore ethical hacking, firewalls, and incident response
+                strategies.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud Computing -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="service-card text-center p-4 h-100">
+              <img src="./img/cloud.png" alt="" class="service-icon mb-3" />
+              <h5 class="fw-bold">Cloud Computing</h5>
+              <p class="service-desc">
+                Understand the cloud ecosystem and how to build scalable
+                solutions.
+              </p>
+              <div class="extra-text">
+                Get hands-on with AWS, Azure, containers, and CI/CD pipelines.
+                <div class="mt-3">
+                  <a href="#" class="btn btn-outline-light btn-sm">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- services end -->
+
+    <!-- cirtificate start -->
+
+    <section class="popular-certificates-section py-5 text-white gap">
+      <div class="container text-center mb-4">
+        <h2 class="fw-bold display-6" data-aos="fade-up">
+          Popular Certificates
+        </h2>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">
+          Stand out with these industry-recognized certifications in Computer
+          Science and Engineering.
+        </p>
+      </div>
+
+      <!-- Card Slider -->
+      <div class="container position-relative">
+        <div
+          id="certCardCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Carousel Item 1: First 3 cards -->
+            <div class="carousel-item active">
+              <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Free Trial</span
+                    >
+                    <img
+                      src="./img/cirti1.webp"
+                      alt="Google Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">Google IT Support Certificate</h5>
+                    <p class="small text-light mb-2">
+                      Foundational training in networking, troubleshooting, &
+                      security.
+                    </p>
+                    <img src="./img/google.png" alt="Google" class="logo-img" />
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Free Trial</span
+                    >
+                    <img
+                      src="./img/cirti2.jpeg"
+                      alt="IBM Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">IBM Data Science Certificate</h5>
+                    <p class="small text-light mb-2">
+                      Master Python, SQL, and data analytics through hands-on
+                      labs.
+                    </p>
+                    <img src="./img/ibm.png" alt="IBM" class="logo-img" />
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Free Trial</span
+                    >
+                    <img
+                      src="./img/cirti3.png"
+                      alt="AWS Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">AWS Cloud Practitioner</h5>
+                    <p class="small text-light mb-2">
+                      Understand AWS cloud infrastructure, billing, and key
+                      services.
+                    </p>
+                    <img src="./img/aws.png" alt="AWS" class="logo-img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Item 2: Next 3 cards -->
+            <div class="carousel-item">
+              <div class="row g-4 justify-content-center">
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Top Pick</span
+                    >
+                    <img
+                      src="./img/cirti4.jpg"
+                      alt="Meta Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">Meta Front-End Developer</h5>
+                    <p class="small text-light mb-2">
+                      Master HTML, CSS, JS & React through real-world capstone
+                      projects.
+                    </p>
+                    <img src="./img/meta.png" alt="Meta" class="logo-img" />
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Recommended</span
+                    >
+                    <img
+                      src="./img/cirti5.avif"
+                      alt="Microsoft Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">Microsoft Azure Fundamentals</h5>
+                    <p class="small text-light mb-2">
+                      Build your cloud basics with services, workloads &
+                      security in Azure.
+                    </p>
+                    <img
+                      src="./img/microsoft.png"
+                      alt="Azure"
+                      class="logo-img"
+                    />
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                  <div
+                    class="certificate-card p-4 text-center position-relative h-100"
+                    data-aos="zoom-in"
+                  >
+                    <span class="cert-tag position-absolute top-0 end-0 m-3"
+                      >Free Trial</span
+                    >
+                    <img
+                      src="./img/cirti6.webp"
+                      alt="Coursera Cert"
+                      class="cert-img mb-3"
+                    />
+                    <h5 class="fw-bold">DeepLearning.AI Machine Learning</h5>
+                    <p class="small text-light mb-2">
+                      Get started with ML models, data pipelines, and model
+                      deployment.
+                    </p>
+                    <img
+                      src="./img/deeplearning.png"
+                      alt="DeepLearningAI"
+                      class="logo-img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Controls -->
+          <button
+            class="carousel-control-prev custom-carousel-arrow"
+            type="button"
+            data-bs-target="#certCardCarousel"
+            data-bs-slide="prev"
+          >
+            <i class="bi bi-arrow-left-circle-fill fs-2"></i>
+          </button>
+          <button
+            class="carousel-control-next custom-carousel-arrow"
+            type="button"
+            data-bs-target="#certCardCarousel"
+            data-bs-slide="next"
+          >
+            <i class="bi bi-arrow-right-circle-fill fs-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="text-center mt-4">
+        <a href="#" class="btn view-all-btn px-4 py-2">View All</a>
+      </div>
+    </section>
+
+    <!-- curtificate end -->
+
+    <!-- testimonial start -->
+
+    <section class="testimonials-section py-5 text-white gap">
+      <div class="container text-center mb-5">
+        <h2 class="display-6 fw-bold">What Our Learners Say</h2>
+        <p class="lead">Trusted by thousands of students across domains.</p>
+      </div>
+
+      <div class="container position-relative">
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row gx-4">
+                <div class="col-md-6 mb-4">
+                  <div class="testimonial-card p-4 rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="./img/user1.jpg"
+                        alt="User 1"
+                        class="testimonial-img me-3"
+                      />
+                      <div>
+                        <h6 class="fw-bold mb-0">Tom Wishkesh</h6>
+                        <small class="text-muted">Frontend Developer</small>
+                      </div>
+                    </div>
+                    <p class="fst-italic">
+                      "One of the best platforms to upgrade tech skills. Highly
+                      recommend!"
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="testimonial-card p-4 rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="./img/user2.jpg"
+                        alt="User 2"
+                        class="testimonial-img me-3"
+                      />
+                      <div>
+                        <h6 class="fw-bold mb-0">Meera Patel</h6>
+                        <small class="text-muted">AI Enthusiast</small>
+                      </div>
+                    </div>
+                    <p class="fst-italic">
+                      "Loved the AI course! Super interactive and real-world
+                      applicable."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row gx-4">
+                <div class="col-md-6 mb-4">
+                  <div class="testimonial-card p-4 rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="./img/user3.jpg"
+                        alt="User 3"
+                        class="testimonial-img me-3"
+                      />
+                      <div>
+                        <h6 class="fw-bold mb-0">Angelo Fernando</h6>
+                        <small class="text-muted">Cloud Engineer</small>
+                      </div>
+                    </div>
+                    <p class="fst-italic">
+                      "The cloud certification track gave me a great head
+                      start!"
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                  <div class="testimonial-card p-4 rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                      <img
+                        src="./img/user4.jpg"
+                        alt="User 4"
+                        class="testimonial-img me-3"
+                      />
+                      <div>
+                        <h6 class="fw-bold mb-0">Briaan Mark</h6>
+                        <small class="text-muted">UI/UX Designer</small>
+                      </div>
+                    </div>
+                    <p class="fst-italic">
+                      "Fantastic UI/UX lessons! It completely changed my design
+                      workflow."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Controls -->
+          <button
+            class="carousel-control-prev centered-arrow"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="circle-btn"
+              ><i class="bi bi-arrow-left-short fs-2"></i
+            ></span>
+          </button>
+          <button
+            class="carousel-control-next centered-arrow"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="circle-btn"
+              ><i class="bi bi-arrow-right-short fs-2"></i
+            ></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonial end -->
+
+    <!-- booking system start -->
+
+    <section class="booking-section py-5 text-white gap">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="display-6 fw-bold">Book Your Session</h2>
+          <p class="lead">
+            Schedule your personalized learning session with ease.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <form
+              class="p-4 rounded-4 booking-form-box shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="+91 12345 67890"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Choose a Date</label>
+                <input type="date" class="form-control" id="date" required />
+              </div>
+              <div class="mb-4">
+                <label for="time" class="form-label">Select Time</label>
+                <input type="time" class="form-control" id="time" required />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-light fw-bold">
+                  Confirm Booking
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- booking system end -->
+
+    <!-- get the app strart -->
+
+    <section class="get-app-section py-5 text-white gap">
+      <div class="container">
+        <div
+          class="row align-items-center justify-content-between flex-column-reverse flex-lg-row"
+        >
+          <!-- Video Section -->
+          <div class="col-lg-6 d-flex justify-content-center mb-5 mb-lg-0">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              class="img-fluid"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <source src="./img/preview.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <!-- Text and Download Buttons -->
+          <div class="col-lg-5 text-center text-lg-start">
+            <h2
+              class="fw-bold display-6 mb-3"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              Get the App Now
+            </h2>
+            <p class="lead mb-4" data-aos="fade-right" data-aos-delay="200">
+              Access all courses, track progress, and learn on the go. Download
+              our app now and take your learning wherever you are.
+            </p>
+
+            <!-- Buttons Row -->
+            <div
+              class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3"
+            >
+              <!-- iOS Button - always visible -->
+              <a
+                href="#"
+                class="btn download-btn d-flex align-items-center gap-2 px-4 py-2"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-apple fs-4"></i>
+                <span>Download on iOS</span>
+              </a>
+
+              <!-- Android Button - always visible -->
+              <a
+                href="#"
+                class="btn download-btn d-flex align-items-center gap-2 px-4 py-2"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-google-play fs-5"></i>
+                <span>Get it on Android</span>
+              </a>
+
+              <!-- Windows Button - visible on lg and up -->
+              <a
+                href="#"
+                class="btn download-btn d-none d-lg-flex align-items-center gap-2 px-4 py-2"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-windows fs-5"></i>
+                <span>Download for Windows</span>
+              </a>
+
+              <!-- Mac Button - visible on lg and up -->
+              <a
+                href="#"
+                class="btn download-btn d-none d-lg-flex align-items-center gap-2 px-4 py-2"
+                data-aos="fade-right"
+                data-aos-delay="200"
+              >
+                <i class="bi bi-apple fs-4"></i>
+                <span>Download for Mac</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- get the app end -->
+
+    <!-- footer start -->
+
+    <footer class="footer py-4 text-white">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <!-- Logo -->
+          <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+            <img src="./img/logo.png" alt="Logo" style="max-height: 40px" />
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="col-md-4 text-center mb-3 mb-md-0">
+            <ul class="list-inline mb-1">
+              <li class="list-inline-item mx-2">
+                <a href="#" class="footer-link">Home</a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#" class="footer-link">Courses</a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#" class="footer-link">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item mx-2">
+                <a href="#" class="footer-link">Terms</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="col-md-4 text-center text-md-end">
+            <a href="#" class="footer-icon mx-2"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="footer-icon mx-2"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="footer-icon mx-2"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="footer-icon mx-2"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-3">
+          <div class="col-12 text-center small">
+            © <span id="currentYear"></span> Mainak. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="./custom_js/custom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

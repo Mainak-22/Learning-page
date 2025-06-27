@@ -1,0 +1,17 @@
+.footer-input {
+  background-color: #121212;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.footer-input::placeholder {
+  color: #bbb;
+  opacity: 1; /* Ensure it's visible in all browsers */
+}
+
+.footer-input:focus {
+  background-color: #1a1a1a;
+  color: #050505;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
