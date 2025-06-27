@@ -107,6 +107,10 @@ body {
     background: linear-gradient(135deg, rgba(143, 148, 251, 0.6), rgba(78, 84, 200, 0.4));
     transform: scale(1.05);
 }
+.img-fluid{
+  max-width: 48% !important;
+  margin-bottom: 190px !important;
+}
 /* hero end */
 /* customer start */
 .logo-slider {
